@@ -1415,7 +1415,7 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
         // Add blur effect
         UIBlurEffectStyle blurEffectStyle = [self defaultStyleResolvingAutomatic] == SVProgressHUDStyleDark ? UIBlurEffectStyleDark : UIBlurEffectStyleLight;
         UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:blurEffectStyle];
-        self.hudView.effect = [self defaultStyleResolvingAutomatic] == SVProgressHUDStyleDark) ? nil : blurEffect;
+        self.hudView.effect = ([self defaultStyleResolvingAutomatic] == SVProgressHUDStyleDark) ? nil : blurEffect;
         
         // We omit UIVibrancy effect and use a suitable background color as an alternative.
         // This will make everything more readable. See the following for details:
